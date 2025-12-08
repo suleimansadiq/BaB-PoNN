@@ -1,57 +1,50 @@
-# BaB-PoNN: Posit-8 Branch-and-Bound Robustness Verification
+# BaB-PoNN: Posit Neural Network Branch-and-Bound Robustness Verification
 
 This repository contains a **single branch-and-bound (BaB) robustness-verification framework**, instantiated for **two fixed posit-8 neural-network architectures** trained on MNIST:
 
 - **MNIST MLP (posit-8)**
 - **LeNet-5 (posit-8)**
 
-Both variants implement **posit-8 arithmetic with quire-8 accumulation**, using the **SoftPosit** library.  
-The verifier checks **input-space robustness** under a **joint perturbation budget**:
+Both variants implement **posit-8 arithmetic with quire-8 accumulation**, using the **SoftPosit** library. Robustness is measured in **input space** under a joint perturbation budget:
 
 - `kmax` — maximum number of pixels that may be changed  
 - `bmax` — maximum total number of bit flips across all changed pixels  
 
-A **counterexample** is any perturbed image that satisfies both budgets and changes the model’s **clean posit-8 prediction**.
+A **counterexample** is any perturbed image that satisfies `(kmax, bmax)` and changes the model’s **clean posit-8 prediction**.
 
 ---
 
 ## 1. Repository Structure
 
-A **single BaB framework** is implemented and instantiated for **two architectures**.
+A single BaB framework is instantiated for two architectures.
 
 ### 1.1 `MNIST-MLP/`
 
-Contains the BaB instantiation for a fixed posit-8 MNIST MLP.
+BaB instantiation for a fixed posit-8 MNIST MLP.
 
-Includes:
+Contains:
 
-- `posit_bab_verify_mlp_replay*.c` — standalone MLP verifier
-- Posit-8 weights and bias `.bin` files
+- `posit_bab_verify_mlp_replay*.c` — standalone MLP verifier  
+- Posit-8 weights and bias `.bin` files  
 - MNIST data:
   - `mnist_images_u8.bin`
   - `mnist_labels_u8.bin`
-- `driver/` folder with shell scripts for batch verification runs  
-  - Scripts must be made executable, for example:
-    ```bash
-    chmod +x driver/*.sh
-    ```
+- `driver/` — shell scripts for batch / parallel verification runs  
+  - Make them executable before use, e.g. `chmod +x driver/*.sh`
 
 ### 1.2 `LeNet5-8/`
 
-Contains the BaB instantiation for a fixed posit-8 LeNet-5.
+BaB instantiation for a fixed posit-8 LeNet-5.
 
-Includes:
+Contains:
 
-- `posit_bab_verify_lenet5_replay*.c` — standalone LeNet-5 verifier
-- Posit-8 conv + FC layer binaries
+- `posit_bab_verify_lenet5_replay*.c` — standalone LeNet-5 verifier  
+- Posit-8 conv + FC layer `.bin` files  
 - MNIST data:
   - `mnist_images_u8.bin`
   - `mnist_labels_u8.bin`
-- `driver/` folder with batch / parallel scripts  
-  - Also make executable with:
-    ```bash
-    chmod +x driver/*.sh
-    ```
+- `driver/` — shell scripts for batch / parallel verification runs  
+  - Again, make them executable: `chmod +x driver/*.sh`
 
 Each verifier C file is a **self-contained executable**: it loads the posit-8 model, reads MNIST, and runs the same BaB robustness framework specialized to that architecture.
 
@@ -59,102 +52,92 @@ Each verifier C file is a **self-contained executable**: it loads the posit-8 mo
 
 ## 2. Dependencies
 
-### 2.1 GCC / build tools
+The code assumes the following libraries and tools are installed and available to your C toolchain:
 
-On Ubuntu / Debian:
+- **C toolchain**  
+  - e.g. `gcc`, `make`, C11 support
+- **SoftPosit** for posit and quire arithmetic  
+  - Project page: <https://gitlab.com/cerlane/SoftPosit>
+- **GMP (GNU Multiple Precision Arithmetic Library)**  
+  - Used for integer / arithmetic bookkeeping
+- Standard system libraries:
+  - `libm` (math)
+  - `pthread` (POSIX threads)
 
-```bash
-sudo apt update
-sudo apt install build-essential
-SoftPosit (posit-8 + quire-8 arithmetic)
-The framework uses SoftPosit for posit and quire arithmetic.
+Include and library paths (e.g. `-I/usr/local/include`, `-L/usr/local/lib`) may need to be adapted to your local installation.
 
-Project:
-https://gitlab.com/cerlane/SoftPosit
+---
 
+## 3. Required Data Files
 
-2.3 GMP (GNU Multiple Precision Arithmetic Library)
-Required by the search framework (integer bookkeeping etc.):
+Each architecture folder expects the following binary dumps to be present.
 
-sudo apt install libgmp-dev
-The verifiers also link against:
+### 3.1 MNIST binary dumps
 
--lm (math)
+- `mnist_images_u8.bin`  
+  - 10,000 MNIST test images  
+  - each image is 28×28, stored as 784 bytes (`uint8`)
 
--pthread (threads)
+- `mnist_labels_u8.bin`  
+  - 10,000 labels in `{0,…,9}` (`uint8`)
 
-3. Required Data Files
-Each architecture folder expects the following files to be present.
+### 3.2 Posit-8 model binaries
 
-3.1 MNIST binary dumps
-mnist_images_u8.bin
+Exact filenames may vary slightly by directory, but typical LeNet-5 files are:
 
-10,000 MNIST test images
-
-each image is 28×28, stored as 784 bytes (uint8)
-
-mnist_labels_u8.bin
-
-10,000 labels in {0,…,9} (uint8)
-
-3.2 Posit-8 model binaries
-Exact filenames may vary slightly, but typical LeNet-5 files are:
-
-conv1_W_p8.bin, conv1_b_p8.bin
-
-conv2_W_p8.bin, conv2_b_p8.bin
-
-fc1_W_p8.bin, fc1_b_p8.bin
-
-fc2_W_p8.bin, fc2_b_p8.bin
-
-fc3_W_p8.bin, fc3_b_p8.bin
+- `conv1_W_p8.bin`, `conv1_b_p8.bin`  
+- `conv2_W_p8.bin`, `conv2_b_p8.bin`  
+- `fc1_W_p8.bin`, `fc1_b_p8.bin`  
+- `fc2_W_p8.bin`, `fc2_b_p8.bin`  
+- `fc3_W_p8.bin`, `fc3_b_p8.bin`  
 
 Typical MLP files:
 
-fc1_W_p8.bin, fc1_b_p8.bin
+- `fc1_W_p8.bin`, `fc1_b_p8.bin`  
+- `fc2_W_p8.bin`, `fc2_b_p8.bin`  
+- `fc3_W_p8.bin`, `fc3_b_p8.bin`  
 
-fc2_W_p8.bin, fc2_b_p8.bin
+These contain posit-8 encoded weights and biases and are read directly by the C code.
 
-fc3_W_p8.bin, fc3_b_p8.bin
+---
 
-These files contain posit-8 encoded weights/biases and are read directly by the C code.
+## 4. Building the Verifiers
 
-4. Building the Verifiers
-4.1 Increase stack size (recommended)
-The BaB recursion can be deep. Before compiling or running, it is recommended to run:
+### 4.1 Stack size
+
+The BaB recursion can be deep. It is recommended to increase the stack limit before compiling/running, e.g.:
+
+```bash
 ulimit -s unlimited
-This should be done in the same shell from which you invoke gcc and the verifier binaries.
 
-4.2 Example build: LeNet5-8 verifier
+4.2 Example build: LeNet5-8
+
 From inside LeNet5-8/:
-
 ulimit -s unlimited
 
 gcc -O3 -std=c11 posit_bab_verify_lenet5_replay_nolace.c \
     -o posit_bab_verify_lenet5_replay_nolace \
     -I/usr/local/include -L/usr/local/lib \
     -march=native -flto -fomit-frame-pointer -DNDEBUG \
-    -lgmp -lm -pthread -l:libsoftposit.a
-Depending on your system, you may need -lsoftposit instead of -l:libsoftposit.a.
+    -lgmp -lm -pthread -lsoftposit
+Adjust include/library paths and the SoftPosit library name if needed for your system.
 
-4.3 Example build: MNIST-MLP verifier
+4.3 Example build: MNIST-MLP
+
 From inside MNIST-MLP/:
-
 ulimit -s unlimited
 
 gcc -O3 -std=c11 posit_bab_verify_mlp_replay_nolace.c \
     -o posit_bab_verify_mlp_replay_nolace \
     -I/usr/local/include -L/usr/local/lib \
     -march=native -flto -fomit-frame-pointer -DNDEBUG \
-    -lgmp -lm -pthread -l:libsoftposit.a
+    -lgmp -lm -pthread -lsoftposit
 
 5. Running the Verifiers
+
 Both architecture-specific verifiers share the same high-level CLI.
 
 5.1 Example run (LeNet5-8)
-bash
-Copy code
 ./posit_bab_verify_lenet5_replay_nolace \
     --idx 26 \
     --kmax 2 \
@@ -165,46 +148,47 @@ Copy code
     --timelimit 100000 \
     --greedy \
     --verbose 2
-This will:
+    
+This run:
 
-Load MNIST image index 26 and its label
+uses MNIST image index 26
 
-Compute the clean posit-8 logits and top-1 prediction (y_ref)
+defines budgets (kmax=2, bmax=4)
 
-Search for a perturbed input within (kmax=2, bmax=4) that changes the prediction
+restricts to the topx=200 most influential symbolic pixels
 
-Use influence-based pixel ranking with topx=200 and widening factor 1.5
+applies a widening factor 1.5 to bounds
 
-Stop if the recursion depth hits 500000000 or the time limit hits 100000 seconds
+uses an aggressive depth limit and time limit
 
-Use greedy warm-start heuristics (--greedy)
+enables greedy warm-start heuristics
 
-Log progress at verbosity level 2
+logs at verbosity level 2
 
 6. Command-Line Options (Summary)
-The exact set of options is parsed via getopt_long in the C files.
-Common options include:
+
+The exact options are parsed via getopt_long in the C code. Common flags:
 
 --idx <N>
 MNIST test index (0–9999).
 
 --kmax <K>
-Max number of pixels allowed to change (K budget).
+Maximum number of pixels allowed to change (K budget).
 
 --bmax <B>
-Max total number of bit flips across all changed pixels (B budget).
+Maximum total number of bit flips across all changed pixels (B budget).
 
 --xrc <r0-r1,c0-c1>
-Restrict perturbations to a rectangular region of the image (rows r0–r1, columns c0–c1).
+Restrict perturbations to a rectangular region (rows r0–r1, cols c0–c1).
 
 --topx <X>
-Restrict symbolic pixels to the X most influential ones (based on influence metric).
+Restrict symbolic pixels to the X most influential candidates.
 
 --widen <W>
-Widening factor applied to optimistic bounds (W >= 1.0).
+Widening factor for optimistic bounds (W ≥ 1.0).
 
 --depth <D>
-Recursion depth limit for the BaB search.
+Recursion depth limit for BaB.
 
 --timelimit <T>
 Wall-clock time limit in seconds.
@@ -213,46 +197,38 @@ Wall-clock time limit in seconds.
 Stop after visiting N BaB nodes.
 
 --idlelimit <S>
-Stop if no improvement in bounds occurs for S seconds.
+Stop if no meaningful improvement in the bound for S seconds.
 
 --idle-eps <eps>
-Small epsilon for deciding whether an improvement is significant.
+Threshold for what counts as a meaningful improvement.
 
 --greedy
-Enable greedy warm-start with both byte-level and bit-level strategies.
+Enable both greedy byte-level and bit-level warm starts.
 
---greedy-byte
-Only greedy byte-level warm start.
-
---greedy-bit
-Only greedy bit-level warm start.
+--greedy-byte / --greedy-bit
+Enable only the corresponding greedy strategy.
 
 --no-greedy, --no-greedy-byte, --no-greedy-bit
-Disable the corresponding greedy modes.
+Disable the corresponding greedy mode(s).
 
 --verbose <1|2|3>
-Verbosity level:
-
-1: info
-
-2: debug
-
-3: trace
+Logging verbosity (info / debug / trace).
 
 --progress <N>
-Periodic progress logging every N nodes (if implemented in the driver).
+Periodic progress reporting (if used in your driver).
 
 --rank-fast
-Use a fast influence-based ranking routine for candidate pixels.
+Use fast influence-based ranking.
 
 --roi-heur <H> or --roi-heur <HxW>
-Automatically choose an H×W block with largest influence as the region of interest.
+Automatically choose an H×W ROI block with largest influence.
 
 --no-root-bound
-Disable the initial root-bound UNSAT check (forces full BaB exploration).
+Skip the initial root UNSAT bound, forcing full BaB exploration.
 
 7. Driver Scripts (Batch / Parallel Verification)
-Each architecture folder contains a driver/ directory, with scripts such as:
+
+Each architecture folder contains a driver/ directory with scripts such as:
 
 run_local_robustness_mlp.sh
 
@@ -262,30 +238,29 @@ run_global_robustness_*.sh
 
 These scripts typically:
 
-Compile the corresponding verifier binary (if needed).
+compile the verifier binary (if needed)
 
-Loop over a range of MNIST indices.
+loop over a range of MNIST indices
 
-Launch multiple verification jobs in parallel (controlled by MAX_JOBS or similar).
+launch multiple verification jobs in parallel
 
-Store individual logs under a logs/ directory.
+store logs under a logs/ directory
 
-Aggregate results into a summary .csv file.
+aggregate results into a summary .csv
 
 Before using the scripts:
+cd driver
+chmod +x *.sh
+./*.sh
 
 cd driver
 chmod +x *.sh
-Then, for example:
 ./run_local_robustness_lenet5.sh
 
-8. License
-This codebase is made available under the MIT License, suitable for research and academic use, redistribution, and extension.
-See the LICENSE file in the repository root for full terms.
-
 9. Citation
-If you use this framework in your research or publications, please cite the associated paper.
 
-A full BibTeX entry will be added once the final paper and venue details are available.
+If you use this framework in your research, please cite the associated paper.
+
+A full BibTeX entry will be provided once the final paper and venue details are available.
 
 
