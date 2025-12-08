@@ -1,0 +1,48 @@
+{
+  "layout": {
+    "conv": "kernel layout [kh, kw, in_c, out_c], row-major contiguous",
+    "fc": "matrix layout [in_dim, out_dim], row-major contiguous",
+    "dtype": "posit8 (1 byte per element) raw, no header"
+  },
+  "shapes": {
+    "conv1_W": [
+      5,
+      5,
+      1,
+      6
+    ],
+    "conv1_b": [
+      6
+    ],
+    "conv2_W": [
+      5,
+      5,
+      6,
+      16
+    ],
+    "conv2_b": [
+      16
+    ],
+    "fc1_W": [
+      400,
+      120
+    ],
+    "fc1_b": [
+      120
+    ],
+    "fc2_W": [
+      120,
+      84
+    ],
+    "fc2_b": [
+      84
+    ],
+    "fc3_W": [
+      84,
+      10
+    ],
+    "fc3_b": [
+      10
+    ]
+  }
+}
