@@ -66,32 +66,16 @@ On Ubuntu / Debian:
 ```bash
 sudo apt update
 sudo apt install build-essential
-2.2 SoftPosit (posit-8 + quire-8 arithmetic)
+SoftPosit (posit-8 + quire-8 arithmetic)
 The framework uses SoftPosit for posit and quire arithmetic.
 
 Project:
-
 https://gitlab.com/cerlane/SoftPosit
 
-Typical installation:
-
-bash
-Copy code
-git clone https://gitlab.com/cerlane/SoftPosit.git
-cd SoftPosit
-make
-sudo make install
-This typically installs:
-
-softposit.h → /usr/local/include
-
-libsoftposit.a → /usr/local/lib
 
 2.3 GMP (GNU Multiple Precision Arithmetic Library)
 Required by the search framework (integer bookkeeping etc.):
 
-bash
-Copy code
 sudo apt install libgmp-dev
 The verifiers also link against:
 
@@ -139,17 +123,12 @@ These files contain posit-8 encoded weights/biases and are read directly by the 
 4. Building the Verifiers
 4.1 Increase stack size (recommended)
 The BaB recursion can be deep. Before compiling or running, it is recommended to run:
-
-bash
-Copy code
 ulimit -s unlimited
 This should be done in the same shell from which you invoke gcc and the verifier binaries.
 
 4.2 Example build: LeNet5-8 verifier
 From inside LeNet5-8/:
 
-bash
-Copy code
 ulimit -s unlimited
 
 gcc -O3 -std=c11 posit_bab_verify_lenet5_replay_nolace.c \
@@ -162,8 +141,6 @@ Depending on your system, you may need -lsoftposit instead of -l:libsoftposit.a.
 4.3 Example build: MNIST-MLP verifier
 From inside MNIST-MLP/:
 
-bash
-Copy code
 ulimit -s unlimited
 
 gcc -O3 -std=c11 posit_bab_verify_mlp_replay_nolace.c \
@@ -171,6 +148,7 @@ gcc -O3 -std=c11 posit_bab_verify_mlp_replay_nolace.c \
     -I/usr/local/include -L/usr/local/lib \
     -march=native -flto -fomit-frame-pointer -DNDEBUG \
     -lgmp -lm -pthread -l:libsoftposit.a
+
 5. Running the Verifiers
 Both architecture-specific verifiers share the same high-level CLI.
 
@@ -296,15 +274,11 @@ Aggregate results into a summary .csv file.
 
 Before using the scripts:
 
-bash
-Copy code
 cd driver
 chmod +x *.sh
 Then, for example:
-
-bash
-Copy code
 ./run_local_robustness_lenet5.sh
+
 8. License
 This codebase is made available under the MIT License, suitable for research and academic use, redistribution, and extension.
 See the LICENSE file in the repository root for full terms.
@@ -312,6 +286,6 @@ See the LICENSE file in the repository root for full terms.
 9. Citation
 If you use this framework in your research or publications, please cite the associated paper.
 
-A full BibTeX entry can be added once the final paper and venue details are available.
+A full BibTeX entry will be added once the final paper and venue details are available.
 
 
