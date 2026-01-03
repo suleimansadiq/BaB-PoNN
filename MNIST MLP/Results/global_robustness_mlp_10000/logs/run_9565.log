@@ -1,0 +1,46 @@
+[  0.000s] init: idx=9565 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x8b  0x84  0x8f  0x86  0x78  0xce  0x61  0x8f  0x6a  0x6d
+clean logits (bits): 10001011 10000100 10001111 10000110 01111000 11001110 01100001 10001111 01101010 01101101
+clean logits (double): -6.500000 -16.000000 -4.500000 -12.000000 +8.000000 -0.781250 +2.125000 -4.500000 +3.250000 +3.625000
+[  0.020s] clean prediction: 4 (true label 4)
+[ 38.928s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[ 38.928s] active patch: rows 12-13, cols 12-12 (derived from symPix)
+[ 39.203s] Proceeding to BaB (greedy enabled).
+[ 39.203s] Skipping root bound check (--no-root-bound).
+[ 39.203s] BaB search starting (K≤2, B≤4, nSym=2, depth_limit=500000000, widen=1.00)...
+[ 39.402s] PRUNE: margin=-4.250000, optimistic_rem(widened)=3.375000 → cannot exceed 0.
+[ 39.602s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 39.801s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 40.001s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 40.200s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 40.399s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 40.599s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.750000 → cannot exceed 0.
+[ 40.898s] PRUNE: margin=-6.375000, optimistic_rem(widened)=2.250000 → cannot exceed 0.
+[ 41.098s] PRUNE: margin=-6.125000, optimistic_rem(widened)=3.531250 → cannot exceed 0.
+[ 41.297s] PRUNE: margin=-6.250000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 41.497s] PRUNE: margin=-6.250000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 41.697s] PRUNE: margin=-6.250000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 41.896s] PRUNE: margin=-6.250000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 42.096s] PRUNE: margin=-6.250000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 42.295s] PRUNE: margin=-6.250000, optimistic_rem(widened)=3.500000 → cannot exceed 0.
+[ 42.795s] PRUNE: margin=-6.500000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 42.994s] PRUNE: margin=-6.500000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 43.194s] PRUNE: margin=-6.500000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 43.394s] PRUNE: margin=-6.500000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 43.594s] PRUNE: margin=-6.500000, optimistic_rem(widened)=6.000000 → cannot exceed 0.
+[ 43.794s] PRUNE: margin=-6.500000, optimistic_rem(widened)=6.000000 → cannot exceed 0.
+[ 44.093s] PRUNE: margin=-6.125000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 44.293s] PRUNE: margin=-6.125000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 44.492s] PRUNE: margin=-6.125000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 44.692s] PRUNE: margin=-6.250000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 44.891s] PRUNE: margin=-6.250000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 45.091s] PRUNE: margin=-6.250000, optimistic_rem(widened)=4.500000 → cannot exceed 0.
+[ 45.390s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.625000 → cannot exceed 0.
+[ 45.589s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.625000 → cannot exceed 0.
+[ 45.788s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.625000 → cannot exceed 0.
+[ 45.988s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.625000 → cannot exceed 0.
+[ 46.187s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.875000 → cannot exceed 0.
+[ 46.387s] PRUNE: margin=-4.375000, optimistic_rem(widened)=3.625000 → cannot exceed 0.
+[ 46.587s] PRUNE: margin=-6.375000, optimistic_rem(widened)=5.875000 → cannot exceed 0.
+[ 46.686s] No counterexample within budgets (BaB): no misclassification found.
+STATUS: No counterexample | best_upper_margin=2.500000 | elapsed=46.686s | pixels_changed=0 | total_bit_flips=0 | avg_hamming_per_pixel=0.000000 | patch_rows=12-13 | patch_cols=12-12 | note=no_counterexample_within_budgets

@@ -1,0 +1,28 @@
+[  0.000s] init: idx=8166 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x82  0x86  0x82  0x82  0x82  0x82  0x82  0x82  0x82  0x82
+clean logits (bits): 10000010 10000110 10000010 10000010 10000010 10000010 10000010 10000010 10000010 10000010
+clean logits (double): -32.000000 -12.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000
+[  0.016s] clean prediction: 1 (true label 1)
+[1585.174s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[1585.174s] active patch: rows 7-20, cols 10-17 (derived from symPix)
+[1607.992s] Proceeding to BaB (greedy enabled).
+[1607.992s] Skipping root bound check (--no-root-bound).
+[1607.992s] BaB search starting (K<=2, B<=4, nSym=2, depth_limit=500000000, widen=1.00)...
+[1616.108s] PRUNE: margin=-18.000000, optimistic_rem(widened)=10.000000 -> cannot exceed 0.
+[1624.233s] PRUNE: margin=-18.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1632.336s] PRUNE: margin=-20.000000, optimistic_rem(widened)=14.000000 -> cannot exceed 0.
+[1639.097s] PRUNE: margin=-20.000000, optimistic_rem(widened)=14.000000 -> cannot exceed 0.
+[1643.905s] PRUNE: margin=-20.000000, optimistic_rem(widened)=16.000000 -> cannot exceed 0.
+[1648.811s] PRUNE: margin=-20.000000, optimistic_rem(widened)=14.000000 -> cannot exceed 0.
+[1653.630s] PRUNE: margin=-20.000000, optimistic_rem(widened)=14.000000 -> cannot exceed 0.
+[1658.499s] PRUNE: margin=-20.000000, optimistic_rem(widened)=14.000000 -> cannot exceed 0.
+[1663.330s] PRUNE: margin=-20.000000, optimistic_rem(widened)=12.000000 -> cannot exceed 0.
+[1668.109s] PRUNE: margin=-20.000000, optimistic_rem(widened)=12.000000 -> cannot exceed 0.
+[1672.893s] PRUNE: margin=-20.000000, optimistic_rem(widened)=12.000000 -> cannot exceed 0.
+[1677.665s] PRUNE: margin=-20.000000, optimistic_rem(widened)=12.000000 -> cannot exceed 0.
+[1682.407s] PRUNE: margin=-20.000000, optimistic_rem(widened)=12.000000 -> cannot exceed 0.
+[1687.156s] PRUNE: margin=-20.000000, optimistic_rem(widened)=14.000000 -> cannot exceed 0.
+[1692.001s] PRUNE: margin=-20.000000, optimistic_rem(widened)=16.000000 -> cannot exceed 0.
+[1696.846s] PRUNE: margin=-20.000000, optimistic_rem(widened)=14.000000 -> cannot exceed 0.
+[1699.258s] No counterexample within budgets (BaB): no misclassification found.
+STATUS: No counterexample | best_upper_margin=2.000000 | elapsed=1699.258s | pixels_changed=0 | total_bit_flips=0 | avg_hamming_per_pixel=0.000000 | patch_rows=7-20 | patch_cols=10-17 | note=no_counterexample_within_budgets

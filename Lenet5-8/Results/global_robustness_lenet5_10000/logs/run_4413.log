@@ -1,0 +1,45 @@
+[  0.000s] init: idx=4413 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x83  0x82  0x82  0x82  0x82  0x83  0x86  0x82  0x83  0x82
+clean logits (bits): 10000011 10000010 10000010 10000010 10000010 10000011 10000110 10000010 10000011 10000010
+clean logits (double): -24.000000 -32.000000 -32.000000 -32.000000 -32.000000 -24.000000 -12.000000 -32.000000 -24.000000 -32.000000
+[  0.016s] clean prediction: 6 (true label 6)
+[1315.403s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[1315.403s] active patch: rows 4-5, cols 14-18 (derived from symPix)
+[1321.055s] Proceeding to BaB (greedy enabled).
+[1321.055s] Skipping root bound check (--no-root-bound).
+[1321.055s] BaB search starting (K<=2, B<=4, nSym=2, depth_limit=500000000, widen=1.00)...
+[1326.134s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1331.207s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1336.245s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1343.878s] PRUNE: margin=-12.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1348.923s] PRUNE: margin=-12.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1353.958s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1358.990s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1364.000s] PRUNE: margin=-12.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1371.072s] PRUNE: margin=-12.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1379.185s] PRUNE: margin=-14.000000, optimistic_rem(widened)=4.000000 -> cannot exceed 0.
+[1384.254s] PRUNE: margin=-14.000000, optimistic_rem(widened)=4.000000 -> cannot exceed 0.
+[1389.359s] PRUNE: margin=-14.000000, optimistic_rem(widened)=4.000000 -> cannot exceed 0.
+[1394.440s] PRUNE: margin=-14.000000, optimistic_rem(widened)=4.000000 -> cannot exceed 0.
+[1399.530s] PRUNE: margin=-14.000000, optimistic_rem(widened)=4.000000 -> cannot exceed 0.
+[1404.620s] PRUNE: margin=-14.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1412.255s] PRUNE: margin=-12.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1417.349s] PRUNE: margin=-12.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1422.400s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1427.477s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1435.213s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1440.247s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1445.371s] PRUNE: margin=-14.000000, optimistic_rem(widened)=10.000000 -> cannot exceed 0.
+[1450.468s] PRUNE: margin=-14.000000, optimistic_rem(widened)=10.000000 -> cannot exceed 0.
+[1455.510s] PRUNE: margin=-14.000000, optimistic_rem(widened)=10.000000 -> cannot exceed 0.
+[1460.572s] PRUNE: margin=-14.000000, optimistic_rem(widened)=10.000000 -> cannot exceed 0.
+[1465.627s] PRUNE: margin=-14.000000, optimistic_rem(widened)=10.000000 -> cannot exceed 0.
+[1473.321s] PRUNE: margin=-12.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1478.375s] PRUNE: margin=-14.000000, optimistic_rem(widened)=14.000000 -> cannot exceed 0.
+[1483.426s] PRUNE: margin=-14.000000, optimistic_rem(widened)=14.000000 -> cannot exceed 0.
+[1488.501s] PRUNE: margin=-14.000000, optimistic_rem(widened)=12.000000 -> cannot exceed 0.
+[1493.555s] PRUNE: margin=-14.000000, optimistic_rem(widened)=12.000000 -> cannot exceed 0.
+[1498.626s] PRUNE: margin=-14.000000, optimistic_rem(widened)=12.000000 -> cannot exceed 0.
+[1506.821s] PRUNE: margin=-14.000000, optimistic_rem(widened)=12.000000 -> cannot exceed 0.
+[1511.051s] No counterexample within budgets (BaB): no misclassification found.
+STATUS: No counterexample | best_upper_margin=4.000000 | elapsed=1511.051s | pixels_changed=0 | total_bit_flips=0 | avg_hamming_per_pixel=0.000000 | patch_rows=4-5 | patch_cols=14-18 | note=no_counterexample_within_budgets

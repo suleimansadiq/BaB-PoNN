@@ -1,0 +1,29 @@
+[  0.000s] init: idx=2734 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x82  0x83  0x82  0x81  0x82  0x82  0x82  0x82  0x82  0x82
+clean logits (bits): 10000010 10000011 10000010 10000001 10000010 10000010 10000010 10000010 10000010 10000010
+clean logits (double): -32.000000 -24.000000 -32.000000 -64.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000
+[  0.016s] clean prediction: 1 (true label 1)
+[1617.643s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[1617.644s] active patch: rows 17-18, cols 11-13 (derived from symPix)
+[1628.503s] Proceeding to BaB (greedy enabled).
+[1628.504s] Skipping root bound check (--no-root-bound).
+[1628.504s] BaB search starting (K<=2, B<=4, nSym=2, depth_limit=500000000, widen=1.00)...
+[1636.808s] PRUNE: margin=-8.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1640.960s] Counterexample found: BaB witness (K=1,B=1).
+clean logits (hex):  0x82  0x83  0x82  0x81  0x82  0x82  0x82  0x82  0x82  0x82
+clean logits (bits): 10000010 10000011 10000010 10000001 10000010 10000010 10000010 10000010 10000010 10000010
+clean logits (double): -32.000000 -24.000000 -32.000000 -64.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000
+post-perturb logits (hex):  0x82  0x82  0x82  0x81  0x82  0x82  0x82  0x81  0x82  0x82
+post-perturb logits (bits): 10000010 10000010 10000010 10000001 10000010 10000010 10000010 10000001 10000010 10000010
+post-perturb logits (double): -32.000000 -32.000000 -32.000000 -64.000000 -32.000000 -32.000000 -32.000000 -64.000000 -32.000000 -32.000000
+changes: 1 bytes, 1 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    1  515   18  11    0xfd        11111101   +0.984314     0x7d        01111101   -0.019608    1
+new prediction: 0 (clean ref 1, true 1)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0x82  0x82  0x82  0x81  0x82  0x82  0x82  0x81  0x82  0x82
+replay logits (bits): 10000010 10000010 10000010 10000001 10000010 10000010 10000010 10000001 10000010 10000010
+replay logits (double): -32.000000 -32.000000 -32.000000 -64.000000 -32.000000 -32.000000 -32.000000 -64.000000 -32.000000 -32.000000
+[1640.977s] replay prediction: 0 (clean ref 1, true label 1) | note=witness_found_bab
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=72.000000 | elapsed=1640.977s | pixels_changed=1 | total_bit_flips=1 | avg_hamming_per_pixel=1.000000 | patch_rows=17-18 | patch_cols=11-13 | note=witness_found_bab

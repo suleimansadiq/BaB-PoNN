@@ -1,0 +1,26 @@
+[  0.000s] init: idx=5397 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x85  0x85  0x90  0x3a  0x83  0x4c  0x84  0x84  0xe6  0x87
+clean logits (bits): 10000101 10000101 10010000 00111010 10000011 01001100 10000100 10000100 11100110 10000111
+clean logits (double): -14.000000 -14.000000 -4.000000 +0.906250 -24.000000 +1.375000 -16.000000 -16.000000 -0.406250 -10.000000
+[  0.010s] clean prediction: 5 (true label 5)
+[  0.284s] heuristic ROI: 2x2 block at rows 16-17, cols 23-24
+[  0.470s] selection: nSym=2 (from 4), topx=2, rank_fast=off
+[  0.470s] active patch: rows 16-16, cols 23-24 (derived from symPix)
+[  0.528s] Greedy BYTE warm start: SAT (K=1,B=2).
+clean logits (hex):  0x85  0x85  0x90  0x3a  0x83  0x4c  0x84  0x84  0xe6  0x87
+clean logits (bits): 10000101 10000101 10010000 00111010 10000011 01001100 10000100 10000100 11100110 10000111
+clean logits (double): -14.000000 -14.000000 -4.000000 +0.906250 -24.000000 +1.375000 -16.000000 -16.000000 -0.406250 -10.000000
+post-perturb logits (hex):  0x85  0x86  0x96  0x45  0x83  0x3b  0x84  0x84  0xd8  0x87
+post-perturb logits (bits): 10000101 10000110 10010110 01000101 10000011 00111011 10000100 10000100 11011000 10000111
+post-perturb logits (double): -14.000000 -12.000000 -3.250000 +1.156250 -24.000000 +0.921875 -16.000000 -16.000000 -0.625000 -10.000000
+changes: 1 bytes, 2 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    0  471   16  23    0x00        00000000   -1.000000     0xc0        11000000   +0.505882    2
+new prediction: 3 (true 5)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0x85  0x86  0x96  0x45  0x83  0x3b  0x84  0x84  0xd8  0x87
+replay logits (bits): 10000101 10000110 10010110 01000101 10000011 00111011 10000100 10000100 11011000 10000111
+replay logits (double): -14.000000 -12.000000 -3.250000 +1.156250 -24.000000 +0.921875 -16.000000 -16.000000 -0.625000 -10.000000
+[  0.529s] replay prediction: 3 (true label 5) | note=witness_found_greedy_byte
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=-1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.000000 | elapsed=0.529s | pixels_changed=1 | total_bit_flips=2 | avg_hamming_per_pixel=2.000000 | patch_rows=16-16 | patch_cols=23-24 | note=witness_found_greedy_byte

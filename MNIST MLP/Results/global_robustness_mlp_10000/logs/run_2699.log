@@ -1,0 +1,42 @@
+[  0.000s] init: idx=2699 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x87  0x95  0x65  0x9e  0x8b  0x9c  0x38  0x9b  0xb1  0x8a
+clean logits (bits): 10000111 10010101 01100101 10011110 10001011 10011100 00111000 10011011 10110001 10001010
+clean logits (double): -10.000000 -3.375000 +2.625000 -2.250000 -6.500000 -2.500000 +0.875000 -2.625000 -1.468750 -7.000000
+[  0.009s] clean prediction: 2 (true label 2)
+[ 37.125s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[ 37.125s] active patch: rows 11-13, cols 5-13 (derived from symPix)
+[ 37.594s] Proceeding to BaB (greedy enabled).
+[ 37.594s] Skipping root bound check (--no-root-bound).
+[ 37.594s] BaB search starting (K≤2, B≤4, nSym=2, depth_limit=500000000, widen=1.00)...
+[ 38.105s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 38.310s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 38.513s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 38.717s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 38.919s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 39.122s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 39.328s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 39.534s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 39.739s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 39.946s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 40.152s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 40.357s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 40.562s] PRUNE: margin=-0.031250, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 40.869s] Counterexample found: BaB witness (K=2, B=4).
+clean logits (hex):  0x87  0x95  0x65  0x9e  0x8b  0x9c  0x38  0x9b  0xb1  0x8a
+clean logits (bits): 10000111 10010101 01100101 10011110 10001011 10011100 00111000 10011011 10110001 10001010
+clean logits (double): -10.000000 -3.375000 +2.625000 -2.250000 -6.500000 -2.500000 +0.875000 -2.625000 -1.468750 -7.000000
+post-perturb logits (hex):  0x88  0x9a  0x4a  0x97  0x8e  0xb2  0x4b  0x98  0xd0  0x8c
+post-perturb logits (bits): 10001000 10011010 01001010 10010111 10001110 10110010 01001011 10011000 11010000 10001100
+post-perturb logits (double): -8.000000 -2.750000 +1.312500 -3.125000 -5.000000 -1.437500 +1.343750 -3.000000 -0.750000 -6.000000
+changes: 2 bytes, 4 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    0  369   13   5    0x00        00000000   -1.000000     0xa0        10100000   +0.254902    2
+    1  321   11  13    0x00        00000000   -1.000000     0xa0        10100000   +0.254902    2
+new prediction: 6 (true 2)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0x88  0x9a  0x4a  0x97  0x8e  0xb2  0x4b  0x98  0xd0  0x8c
+replay logits (bits): 10001000 10011010 01001010 10010111 10001110 10110010 01001011 10011000 11010000 10001100
+replay logits (double): -8.000000 -2.750000 +1.312500 -3.125000 -5.000000 -1.437500 +1.343750 -3.000000 -0.750000 -6.000000
+[ 40.870s] replay prediction: 6 (true label 2) | note=witness_found_bab
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=3.937500 | elapsed=40.870s | pixels_changed=2 | total_bit_flips=4 | avg_hamming_per_pixel=2.000000 | patch_rows=11-13 | patch_cols=5-13 | note=witness_found_bab

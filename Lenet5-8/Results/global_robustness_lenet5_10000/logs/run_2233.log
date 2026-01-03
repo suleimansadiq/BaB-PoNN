@@ -1,0 +1,31 @@
+[  0.000s] init: idx=2233 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x81  0x81  0x82  0x82  0x82  0x82  0x82  0x82  0x83  0x82
+clean logits (bits): 10000001 10000001 10000010 10000010 10000010 10000010 10000010 10000010 10000011 10000010
+clean logits (double): -64.000000 -64.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -24.000000 -32.000000
+[  0.017s] clean prediction: 8 (true label 8)
+[1757.403s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[1757.403s] active patch: rows 2-13, cols 8-10 (derived from symPix)
+[1769.195s] Proceeding to BaB (greedy enabled).
+[1769.195s] Skipping root bound check (--no-root-bound).
+[1769.195s] BaB search starting (K<=2, B<=4, nSym=2, depth_limit=500000000, widen=1.00)...
+[1778.204s] PRUNE: margin=-8.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1787.213s] PRUNE: margin=-8.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1800.724s] PRUNE: margin=-8.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1805.236s] Counterexample found: BaB witness (K=1,B=2).
+clean logits (hex):  0x81  0x81  0x82  0x82  0x82  0x82  0x82  0x82  0x83  0x82
+clean logits (bits): 10000001 10000001 10000010 10000010 10000010 10000010 10000010 10000010 10000011 10000010
+clean logits (double): -64.000000 -64.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -24.000000 -32.000000
+post-perturb logits (hex):  0x81  0x81  0x81  0x81  0x82  0x82  0x81  0x81  0x82  0x82
+post-perturb logits (bits): 10000001 10000001 10000001 10000001 10000010 10000010 10000001 10000001 10000010 10000010
+post-perturb logits (double): -64.000000 -64.000000 -64.000000 -64.000000 -32.000000 -32.000000 -64.000000 -64.000000 -32.000000 -32.000000
+changes: 1 bytes, 2 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    0  374   13  10    0xe9        11101001   +0.827451     0x29        00101001   -0.678431    2
+new prediction: 4 (clean ref 8, true 8)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0x81  0x81  0x81  0x81  0x82  0x82  0x81  0x81  0x82  0x82
+replay logits (bits): 10000001 10000001 10000001 10000001 10000010 10000010 10000001 10000001 10000010 10000010
+replay logits (double): -64.000000 -64.000000 -64.000000 -64.000000 -32.000000 -32.000000 -64.000000 -64.000000 -32.000000 -32.000000
+[1805.254s] replay prediction: 4 (clean ref 8, true label 8) | note=witness_found_bab
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=96.000000 | elapsed=1805.254s | pixels_changed=1 | total_bit_flips=2 | avg_hamming_per_pixel=2.000000 | patch_rows=2-13 | patch_cols=8-10 | note=witness_found_bab

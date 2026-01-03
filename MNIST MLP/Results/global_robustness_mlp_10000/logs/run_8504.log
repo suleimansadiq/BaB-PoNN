@@ -1,0 +1,25 @@
+[  0.000s] init: idx=8504 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x85  0x84  0x8e  0x9e  0x8e  0xbc  0x86  0x8e  0x9a  0x24
+clean logits (bits): 10000101 10000100 10001110 10011110 10001110 10111100 10000110 10001110 10011010 00100100
+clean logits (double): -14.000000 -16.000000 -5.000000 -2.250000 -5.000000 -1.125000 -12.000000 -5.000000 -2.750000 +0.562500
+[  0.008s] clean prediction: 9 (true label 9)
+[ 37.014s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[ 37.014s] active patch: rows 11-11, cols 13-14 (derived from symPix)
+[ 37.074s] Greedy BYTE warm start: SAT (K=1,B=4).
+clean logits (hex):  0x85  0x84  0x8e  0x9e  0x8e  0xbc  0x86  0x8e  0x9a  0x24
+clean logits (bits): 10000101 10000100 10001110 10011110 10001110 10111100 10000110 10001110 10011010 00100100
+clean logits (double): -14.000000 -16.000000 -5.000000 -2.250000 -5.000000 -1.125000 -12.000000 -5.000000 -2.750000 +0.562500
+post-perturb logits (hex):  0x85  0x87  0x8d  0xbb  0x8d  0x03  0x87  0x8e  0x9e  0xff
+post-perturb logits (bits): 10000101 10000111 10001101 10111011 10001101 00000011 10000111 10001110 10011110 11111111
+post-perturb logits (double): -14.000000 -10.000000 -5.500000 -1.156250 -5.500000 +0.046875 -10.000000 -5.000000 -2.250000 -0.015625
+changes: 1 bytes, 4 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    0  322   11  14    0x00        00000000   -1.000000     0xb4        10110100   +0.411765    4
+new prediction: 5 (true 9)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0x85  0x87  0x8d  0xbb  0x8d  0x03  0x87  0x8e  0x9e  0xff
+replay logits (bits): 10000101 10000111 10001101 10111011 10001101 00000011 10000111 10001110 10011110 11111111
+replay logits (double): -14.000000 -10.000000 -5.500000 -1.156250 -5.500000 +0.046875 -10.000000 -5.000000 -2.250000 -0.015625
+[ 37.075s] replay prediction: 5 (true label 9) | note=witness_found_greedy_byte
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=-1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.000000 | elapsed=37.075s | pixels_changed=1 | total_bit_flips=4 | avg_hamming_per_pixel=4.000000 | patch_rows=11-11 | patch_cols=13-14 | note=witness_found_greedy_byte

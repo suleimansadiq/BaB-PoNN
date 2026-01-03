@@ -1,0 +1,46 @@
+[  0.000s] init: idx=3492 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x82  0x82  0x82  0x83  0x82  0x83  0x83  0x82  0x84  0x83
+clean logits (bits): 10000010 10000010 10000010 10000011 10000010 10000011 10000011 10000010 10000100 10000011
+clean logits (double): -32.000000 -32.000000 -32.000000 -24.000000 -32.000000 -24.000000 -24.000000 -32.000000 -16.000000 -24.000000
+[  0.017s] clean prediction: 8 (true label 8)
+[1452.465s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[1452.465s] active patch: rows 9-9, cols 14-15 (derived from symPix)
+[1459.613s] Proceeding to BaB (greedy enabled).
+[1459.613s] Skipping root bound check (--no-root-bound).
+[1459.613s] BaB search starting (K<=2, B<=4, nSym=2, depth_limit=500000000, widen=1.00)...
+[1467.628s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1472.947s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1478.269s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1483.674s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1489.058s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1497.112s] PRUNE: margin=-8.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1502.757s] PRUNE: margin=-8.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1508.098s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1513.436s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1518.784s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1524.214s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1532.292s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1541.077s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1554.352s] PRUNE: margin=-8.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1563.204s] PRUNE: margin=-8.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1580.909s] PRUNE: margin=-8.000000, optimistic_rem(widened)=8.000000 -> cannot exceed 0.
+[1589.763s] PRUNE: margin=0.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1594.195s] Counterexample found: BaB witness (K=2,B=3).
+clean logits (hex):  0x82  0x82  0x82  0x83  0x82  0x83  0x83  0x82  0x84  0x83
+clean logits (bits): 10000010 10000010 10000010 10000011 10000010 10000011 10000011 10000010 10000100 10000011
+clean logits (double): -32.000000 -32.000000 -32.000000 -24.000000 -32.000000 -24.000000 -24.000000 -32.000000 -16.000000 -24.000000
+post-perturb logits (hex):  0x82  0x82  0x82  0x82  0x82  0x83  0x82  0x82  0x83  0x83
+post-perturb logits (bits): 10000010 10000010 10000010 10000010 10000010 10000011 10000010 10000010 10000011 10000011
+post-perturb logits (double): -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -24.000000 -32.000000 -32.000000 -24.000000 -24.000000
+changes: 2 bytes, 3 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    0  266    9  14    0x00        00000000   -1.000000     0x40        01000000   -0.498039    1
+    1  267    9  15    0x00        00000000   -1.000000     0xc0        11000000   +0.505882    2
+new prediction: 5 (clean ref 8, true 8)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0x82  0x82  0x82  0x82  0x82  0x83  0x82  0x82  0x83  0x83
+replay logits (bits): 10000010 10000010 10000010 10000010 10000010 10000011 10000010 10000010 10000011 10000011
+replay logits (double): -32.000000 -32.000000 -32.000000 -32.000000 -32.000000 -24.000000 -32.000000 -32.000000 -24.000000 -24.000000
+[1594.213s] replay prediction: 5 (clean ref 8, true label 8) | note=witness_found_bab
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=24.000000 | elapsed=1594.213s | pixels_changed=2 | total_bit_flips=3 | avg_hamming_per_pixel=1.500000 | patch_rows=9-9 | patch_cols=14-15 | note=witness_found_bab

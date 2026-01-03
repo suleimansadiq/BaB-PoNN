@@ -1,0 +1,25 @@
+[  0.000s] init: idx=1051 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x84  0x84  0x8c  0x88  0x78  0xb0  0x9a  0xa4  0x18  0x71
+clean logits (bits): 10000100 10000100 10001100 10001000 01111000 10110000 10011010 10100100 00011000 01110001
+clean logits (double): -16.000000 -16.000000 -6.000000 -8.000000 +8.000000 -1.500000 -2.750000 -1.875000 +0.375000 +4.500000
+[  0.009s] clean prediction: 4 (true label 4)
+[ 39.010s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[ 39.010s] active patch: rows 9-10, cols 13-15 (derived from symPix)
+[ 39.473s] Proceeding to BaB (greedy enabled).
+[ 39.473s] Skipping root bound check (--no-root-bound).
+[ 39.473s] BaB search starting (K≤2, B≤4, nSym=2, depth_limit=500000000, widen=1.00)...
+[ 39.673s] PRUNE: margin=-3.500000, optimistic_rem(widened)=2.750000 → cannot exceed 0.
+[ 39.874s] PRUNE: margin=-3.500000, optimistic_rem(widened)=2.562500 → cannot exceed 0.
+[ 40.074s] PRUNE: margin=-3.500000, optimistic_rem(widened)=2.750000 → cannot exceed 0.
+[ 40.375s] PRUNE: margin=-4.000000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 40.575s] PRUNE: margin=-4.000000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 40.775s] PRUNE: margin=-4.000000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 40.976s] PRUNE: margin=-4.000000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 41.176s] PRUNE: margin=-4.000000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 57.594s] PRUNE: margin=-3.500000, optimistic_rem(widened)=2.843750 → cannot exceed 0.
+[ 57.795s] PRUNE: margin=-3.500000, optimistic_rem(widened)=2.843750 → cannot exceed 0.
+[ 57.995s] PRUNE: margin=-3.500000, optimistic_rem(widened)=2.843750 → cannot exceed 0.
+[ 58.195s] PRUNE: margin=-3.500000, optimistic_rem(widened)=2.843750 → cannot exceed 0.
+[ 58.395s] PRUNE: margin=-3.500000, optimistic_rem(widened)=2.843750 → cannot exceed 0.
+[ 80.218s] No counterexample within budgets (BaB): no misclassification found.
+STATUS: No counterexample | best_upper_margin=3.468750 | elapsed=80.218s | pixels_changed=0 | total_bit_flips=0 | avg_hamming_per_pixel=0.000000 | patch_rows=9-10 | patch_cols=13-15 | note=no_counterexample_within_budgets

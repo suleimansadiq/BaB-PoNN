@@ -1,0 +1,26 @@
+[  0.000s] init: idx=7936 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x83  0x98  0xe6  0x73  0x86  0xaa  0x86  0x87  0xf6  0x8c
+clean logits (bits): 10000011 10011000 11100110 01110011 10000110 10101010 10000110 10000111 11110110 10001100
+clean logits (double): -24.000000 -3.000000 -0.406250 +5.500000 -12.000000 -1.687500 -12.000000 -10.000000 -0.156250 -6.000000
+[  0.009s] clean prediction: 3 (true label 3)
+[ 37.837s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[ 37.837s] active patch: rows 10-11, cols 14-15 (derived from symPix)
+[ 38.303s] Proceeding to BaB (greedy enabled).
+[ 38.303s] Skipping root bound check (--no-root-bound).
+[ 38.303s] BaB search starting (K≤2, B≤4, nSym=2, depth_limit=500000000, widen=1.00)...
+[ 38.504s] PRUNE: margin=-5.468750, optimistic_rem(widened)=5.062500 → cannot exceed 0.
+[ 38.706s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.187500 → cannot exceed 0.
+[ 38.907s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.187500 → cannot exceed 0.
+[ 39.109s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.187500 → cannot exceed 0.
+[ 39.312s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.250000 → cannot exceed 0.
+[ 39.516s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.250000 → cannot exceed 0.
+[ 39.719s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.250000 → cannot exceed 0.
+[ 39.922s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.375000 → cannot exceed 0.
+[ 40.125s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.000000 → cannot exceed 0.
+[ 40.329s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.000000 → cannot exceed 0.
+[ 40.532s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.000000 → cannot exceed 0.
+[ 40.736s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.000000 → cannot exceed 0.
+[ 40.939s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.000000 → cannot exceed 0.
+[ 41.143s] PRUNE: margin=-5.656250, optimistic_rem(widened)=3.000000 → cannot exceed 0.
+[ 41.858s] No counterexample within budgets (BaB): no misclassification found.
+STATUS: No counterexample | best_upper_margin=2.843750 | elapsed=41.858s | pixels_changed=0 | total_bit_flips=0 | avg_hamming_per_pixel=0.000000 | patch_rows=10-11 | patch_cols=14-15 | note=no_counterexample_within_budgets

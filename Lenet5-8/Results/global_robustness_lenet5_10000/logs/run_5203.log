@@ -1,0 +1,30 @@
+[  0.000s] init: idx=5203 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x88  0x97  0x8b  0x8b  0x88  0x88  0x87  0x8b  0x8c  0x8b
+clean logits (bits): 10001000 10010111 10001011 10001011 10001000 10001000 10000111 10001011 10001100 10001011
+clean logits (double): -8.000000 -3.125000 -6.500000 -6.500000 -8.000000 -8.000000 -10.000000 -6.500000 -6.000000 -6.500000
+[  0.016s] clean prediction: 1 (true label 1)
+[1531.025s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[1531.025s] active patch: rows 12-13, cols 12-15 (derived from symPix)
+[1541.579s] Proceeding to BaB (greedy enabled).
+[1541.579s] Skipping root bound check (--no-root-bound).
+[1541.579s] BaB search starting (K<=2, B<=4, nSym=2, depth_limit=500000000, widen=1.00)...
+[1553.015s] PRUNE: margin=-1.000000, optimistic_rem(widened)=0.000000 -> cannot exceed 0.
+[1555.362s] Counterexample found: BaB witness (K=2,B=4).
+clean logits (hex):  0x88  0x97  0x8b  0x8b  0x88  0x88  0x87  0x8b  0x8c  0x8b
+clean logits (bits): 10001000 10010111 10001011 10001011 10001000 10001000 10000111 10001011 10001100 10001011
+clean logits (double): -8.000000 -3.125000 -6.500000 -6.500000 -8.000000 -8.000000 -10.000000 -6.500000 -6.000000 -6.500000
+post-perturb logits (hex):  0x86  0x89  0x88  0x8b  0x87  0x87  0x85  0x88  0x88  0x88
+post-perturb logits (bits): 10000110 10001001 10001000 10001011 10000111 10000111 10000101 10001000 10001000 10001000
+post-perturb logits (double): -12.000000 -7.500000 -8.000000 -6.500000 -10.000000 -10.000000 -14.000000 -8.000000 -8.000000 -8.000000
+changes: 2 bytes, 4 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    0  379   13  15    0xfe        11111110   +0.992157     0x3c        00111100   -0.529412    3
+    1  348   12  12    0x00        00000000   -1.000000     0x80        10000000   +0.003922    1
+new prediction: 3 (clean ref 1, true 1)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0x86  0x89  0x88  0x8b  0x87  0x87  0x85  0x88  0x88  0x88
+replay logits (bits): 10000110 10001001 10001000 10001011 10000111 10000111 10000101 10001000 10001000 10001000
+replay logits (double): -12.000000 -7.500000 -8.000000 -6.500000 -10.000000 -10.000000 -14.000000 -8.000000 -8.000000 -8.000000
+[1555.371s] replay prediction: 3 (clean ref 1, true label 1) | note=witness_found_bab
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=7.375000 | elapsed=1555.371s | pixels_changed=2 | total_bit_flips=4 | avg_hamming_per_pixel=2.000000 | patch_rows=12-13 | patch_cols=12-15 | note=witness_found_bab

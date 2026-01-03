@@ -1,0 +1,776 @@
+[  0.000s] init: idx=7854 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x84  0x84  0x8d  0x88  0x73  0x94  0x89  0x4a  0x62  0x77
+clean logits (bits): 10000100 10000100 10001101 10001000 01110011 10010100 10001001 01001010 01100010 01110111
+clean logits (double): -16.000000 -16.000000 -5.500000 -8.000000 +5.500000 -3.500000 -7.500000 +1.312500 +2.250000 +7.500000
+[  0.008s] clean prediction: 9 (true label 9)
+[  0.330s] heuristic ROI: 2x2 block at rows 17-18, cols 9-10
+[  0.529s] selection: nSym=2 (from 4), topx=2, rank_fast=off
+[  0.530s] active patch: rows 17-17, cols 9-10 (derived from symPix)
+[  1.091s] Proceeding to BaB (greedy enabled).
+[  1.091s] Skipping root bound check (--no-root-bound).
+[  1.091s] BaB search starting (K≤2, B≤4, nSym=2, depth_limit=500000000, widen=1.00)...
+[  1.492s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[  1.692s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.250000 → cannot exceed 0.
+[  1.992s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  2.193s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[  2.393s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[  2.593s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[  2.793s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[  2.993s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  3.193s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  3.393s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  3.592s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  3.793s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  3.993s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  4.250s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.250000 → cannot exceed 0.
+[  4.421s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.250000 → cannot exceed 0.
+[  4.745s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  4.945s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[  5.145s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  5.345s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  5.545s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  5.746s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  5.945s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  6.145s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  6.545s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  6.745s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  6.945s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  7.145s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  7.345s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  7.545s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  7.745s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[  8.045s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[  8.251s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[  8.453s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[  8.653s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[  8.853s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[  9.053s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.687500 → cannot exceed 0.
+[  9.253s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.656250 → cannot exceed 0.
+[  9.553s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.250000 → cannot exceed 0.
+[  9.917s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 10.135s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 10.336s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 10.540s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 10.751s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 10.951s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 11.150s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 11.350s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 11.550s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 11.751s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 11.951s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 12.350s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 12.550s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 12.750s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 12.959s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 13.159s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 13.359s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 13.559s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 13.759s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 13.958s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 14.159s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 14.559s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 14.758s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 14.907s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 15.050s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 15.201s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 15.328s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 15.452s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 15.602s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 15.802s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 17.104s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 17.304s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 17.505s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 17.705s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 17.906s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 18.106s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 18.306s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 18.699s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 18.899s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 19.099s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 19.304s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 19.506s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 19.707s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 19.907s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 20.182s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 20.382s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 20.607s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 20.816s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 21.026s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 21.237s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 21.450s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 21.980s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 22.189s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 22.400s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 22.611s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 22.820s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 23.031s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 23.243s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 23.453s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 23.663s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 23.871s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 24.292s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 24.501s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 24.711s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 24.920s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 25.130s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 25.341s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 25.550s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 25.756s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 25.968s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 27.295s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 27.496s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 27.696s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 27.897s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 28.098s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 28.298s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 28.499s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 28.900s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 29.084s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 29.239s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 29.388s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 29.527s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 29.669s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 29.812s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 30.022s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 30.199s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 30.400s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 30.601s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 30.802s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 31.002s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 31.203s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 31.705s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 32.807s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 33.009s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 33.209s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 33.410s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 33.610s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 33.811s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 34.012s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 34.422s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 34.629s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 34.836s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 35.043s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 35.250s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 35.456s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 35.663s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 35.870s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 36.284s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 36.491s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 36.697s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 36.904s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 37.111s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 37.318s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 37.525s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 37.836s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 38.043s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 38.250s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 38.457s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 38.664s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 38.870s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 39.077s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 39.594s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 39.801s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 40.008s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 40.215s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 40.422s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 40.629s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 40.836s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 41.043s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 41.457s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 41.665s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 41.872s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 42.079s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 42.286s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 42.493s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 42.700s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 43.010s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 43.217s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 43.424s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 43.631s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 43.838s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 44.045s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 44.252s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 44.666s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 44.872s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 45.079s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 45.286s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 45.492s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 45.724s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 45.926s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 46.126s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 46.527s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 46.728s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 46.928s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 47.129s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 47.329s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 47.529s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 47.730s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 48.130s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 48.331s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 48.531s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 48.732s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 48.932s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 49.132s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 49.444s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 49.612s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 49.779s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 49.946s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 50.115s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 50.449s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 50.627s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 50.790s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 50.965s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 51.294s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 51.535s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 51.787s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 52.112s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 52.285s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 52.609s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 53.196s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.250000 → cannot exceed 0.
+[ 53.361s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.312500 → cannot exceed 0.
+[ 57.398s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 57.598s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 57.799s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 58.006s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 58.205s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 58.403s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 60.690s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.500000 → cannot exceed 0.
+[ 60.889s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 61.087s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 61.286s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 61.485s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 61.684s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 61.882s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 63.174s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.500000 → cannot exceed 0.
+[ 63.373s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 63.571s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 63.770s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 63.969s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 64.167s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 64.366s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 64.764s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.500000 → cannot exceed 0.
+[ 64.962s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 65.161s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 65.360s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 65.558s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 65.757s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 65.956s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 66.353s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 66.552s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 66.751s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 66.950s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 67.148s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 67.347s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 67.645s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 67.844s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 68.043s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 68.241s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 68.440s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 68.639s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 71.819s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 72.017s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 72.216s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 72.415s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 72.614s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 72.813s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 74.106s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.500000 → cannot exceed 0.
+[ 74.305s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 74.504s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 74.702s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 74.901s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 75.100s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 75.298s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 75.696s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.500000 → cannot exceed 0.
+[ 75.895s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 76.093s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 76.292s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 76.491s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 76.689s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 76.888s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 77.286s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 77.484s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 77.683s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 77.882s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 78.081s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 78.280s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 78.578s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 78.776s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 78.975s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 79.174s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 79.373s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 79.571s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 79.969s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 81.062s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.500000 → cannot exceed 0.
+[ 81.261s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 81.459s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 81.658s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 81.857s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 82.055s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 82.453s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.500000 → cannot exceed 0.
+[ 82.652s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 82.851s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 83.049s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 83.248s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 83.447s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 83.844s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 84.043s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 84.242s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 84.441s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 84.639s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 84.937s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 85.136s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 85.335s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 85.541s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 85.741s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 86.242s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 86.442s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.500000 → cannot exceed 0.
+[ 86.642s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 86.842s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 87.043s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 87.243s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 87.448s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 87.849s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 88.051s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 88.251s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 88.451s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 88.652s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 88.852s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 89.153s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 89.354s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 89.556s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 89.756s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 89.957s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 90.157s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 90.557s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 90.857s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 91.058s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 91.258s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 91.458s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 91.658s] PRUNE: margin=-2.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[ 91.958s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 92.159s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 92.359s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 92.559s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 92.760s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 93.160s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 93.360s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 93.561s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 93.761s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 93.961s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 94.161s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 94.562s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 94.762s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 94.962s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 95.162s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 95.363s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 95.764s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 95.964s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 96.164s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 96.365s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 96.765s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 96.965s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 97.166s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 97.566s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 97.766s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 98.167s] PRUNE: margin=-2.500000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[ 98.968s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 99.168s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 99.368s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 99.568s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[ 99.768s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[100.069s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[100.269s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[100.469s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[100.669s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[100.869s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[101.070s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[101.470s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[101.670s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[101.870s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[102.070s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[102.271s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[102.671s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[102.871s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[103.074s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[103.274s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[103.674s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[103.875s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[104.076s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[104.476s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[104.676s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[104.976s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.562500 → cannot exceed 0.
+[105.176s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.312500 → cannot exceed 0.
+[105.580s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[105.781s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[105.981s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[106.183s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[106.384s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[106.584s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[106.785s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[106.985s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[107.185s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[107.387s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[107.587s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[107.988s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[108.188s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[108.389s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[108.589s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[108.790s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[108.990s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[109.190s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[109.391s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[109.591s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[109.791s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[110.192s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[110.392s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[110.593s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[110.793s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[111.094s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[111.294s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[114.698s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[114.899s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[115.099s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[115.300s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[118.105s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[118.306s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[118.506s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[118.706s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[118.907s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[119.107s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[119.307s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[119.708s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[119.908s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[120.109s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[120.309s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[120.509s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[120.709s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[121.110s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[121.310s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[121.611s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[121.811s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[122.212s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[122.913s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[123.113s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[123.413s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[124.114s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[124.315s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[124.515s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[124.916s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[125.116s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[126.318s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[126.519s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[126.719s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[126.920s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[127.121s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[127.321s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[127.522s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[127.723s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[127.923s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[128.124s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[128.324s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[128.725s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[128.926s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[129.127s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[129.327s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[129.528s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[129.729s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[129.929s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[130.130s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[130.330s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[130.531s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[130.932s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[131.133s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[131.333s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[131.534s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[131.734s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[131.935s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[132.136s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[132.336s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[132.537s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[132.938s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[133.139s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[133.339s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[137.050s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.750000 → cannot exceed 0.
+[137.752s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[137.952s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[138.153s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[140.258s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.750000 → cannot exceed 0.
+[140.960s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[141.160s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[141.361s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[141.562s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[141.763s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[141.963s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[142.365s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[142.565s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[142.766s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[142.966s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[143.167s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[143.568s] PRUNE: margin=-1.500000, optimistic_rem(widened)=0.625000 → cannot exceed 0.
+[143.769s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[143.970s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[144.170s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[146.177s] PRUNE: margin=-1.500000, optimistic_rem(widened)=1.062500 → cannot exceed 0.
+[147.781s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[147.982s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[148.183s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[148.383s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[148.583s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[148.784s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[148.984s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[149.185s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[149.386s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[149.787s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[149.987s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[150.188s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[150.388s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[150.588s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[150.789s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[150.990s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[151.190s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[151.491s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[151.691s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[151.992s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[152.193s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[152.393s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[152.594s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[152.794s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[153.197s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[153.398s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[153.598s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[153.799s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[154.100s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[154.301s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[154.501s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[154.702s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[155.203s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[155.404s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[155.605s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[155.805s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[156.006s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[156.207s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[156.407s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[156.608s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[157.009s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[157.209s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[157.410s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[157.611s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[157.811s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[158.012s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[158.212s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[158.613s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[158.814s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[159.014s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[159.215s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[159.416s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[159.616s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[159.917s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[160.120s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[160.320s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[160.521s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[160.721s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[160.922s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[161.423s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[161.624s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[161.824s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[162.025s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[162.225s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[162.426s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[162.627s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[162.928s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[163.228s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[163.429s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[163.630s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[163.830s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[164.031s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[164.332s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[164.532s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[164.733s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[164.934s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[165.134s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[165.636s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[165.837s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[166.037s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[166.238s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[166.438s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[166.639s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[166.940s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[167.141s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[167.341s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[167.542s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[167.742s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[167.943s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[168.344s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[168.545s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[168.745s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[168.946s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[169.147s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[169.347s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[169.648s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[169.849s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[170.050s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[170.250s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[170.451s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[170.652s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[171.253s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[171.454s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[171.654s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[171.855s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[172.055s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[172.256s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[172.457s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[172.657s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[173.059s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[173.259s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[173.460s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[173.660s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[173.861s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[174.062s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[174.262s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[174.663s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[174.864s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[175.065s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[175.265s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[175.466s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[175.666s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[175.967s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[176.168s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[176.368s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[176.569s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[176.769s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[176.970s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[177.471s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[177.672s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[177.872s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[178.073s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[178.273s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[178.474s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[178.675s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[178.975s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[179.277s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[179.477s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[179.678s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[179.928s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[180.128s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[180.429s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[180.629s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[180.829s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[181.029s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[181.229s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[181.729s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[181.929s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[182.129s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[182.329s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[182.530s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[182.730s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[183.030s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[183.230s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[183.430s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[183.630s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[183.831s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[184.031s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[184.431s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[184.631s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[184.832s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[185.032s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[185.232s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[185.432s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[185.732s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[185.932s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[186.132s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[186.332s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[186.532s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[186.733s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[187.233s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[187.533s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[187.733s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[187.933s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[188.133s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[188.333s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[188.533s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[188.934s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[189.134s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[189.334s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[189.534s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[189.734s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[190.035s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[190.235s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[190.435s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[190.635s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[190.835s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[191.335s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[191.535s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[191.736s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[191.936s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[192.136s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[192.336s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[192.636s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[192.836s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[193.037s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[193.237s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[193.437s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[193.637s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[194.037s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[194.237s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[194.437s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[194.637s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[194.837s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[195.037s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[195.338s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[195.538s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[195.738s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[195.938s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[196.138s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[196.338s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[196.739s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[196.939s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[197.139s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[197.539s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[197.739s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[197.939s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[198.339s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[198.540s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[198.940s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[199.740s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[199.940s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[200.340s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[201.141s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[202.541s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.250000 → cannot exceed 0.
+[202.741s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[202.941s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[203.341s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[203.542s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[203.942s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[204.742s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[206.342s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[206.542s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[206.742s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[206.942s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.000000 → cannot exceed 0.
+[207.243s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[207.443s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[207.643s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[207.843s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[208.243s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[208.445s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[208.645s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[208.845s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.500000 → cannot exceed 0.
+[209.146s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[209.346s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[209.546s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[209.747s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[210.247s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[210.447s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[210.647s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.125000 → cannot exceed 0.
+[210.847s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[211.147s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.250000 → cannot exceed 0.
+[211.347s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[211.547s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[211.748s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[212.148s] PRUNE: margin=-2.000000, optimistic_rem(widened)=0.250000 → cannot exceed 0.
+[212.448s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[212.648s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[212.948s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[213.148s] PRUNE: margin=-2.000000, optimistic_rem(widened)=1.000000 → cannot exceed 0.
+[213.748s] PRUNE: margin=-2.000000, optimistic_rem(widened)=2.000000 → cannot exceed 0.
+[216.349s] No counterexample within budgets (BaB): no misclassification found.
+STATUS: No counterexample | best_upper_margin=2.812500 | elapsed=216.349s | pixels_changed=0 | total_bit_flips=0 | avg_hamming_per_pixel=0.000000 | patch_rows=17-17 | patch_cols=9-10 | note=no_counterexample_within_budgets

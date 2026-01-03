@@ -1,0 +1,25 @@
+[  0.000s] init: idx=1248 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0xa0  0x86  0xe8  0x90  0x88  0x46  0xbb  0x85  0x46  0x88
+clean logits (bits): 10100000 10000110 11101000 10010000 10001000 01000110 10111011 10000101 01000110 10001000
+clean logits (double): -2.000000 -12.000000 -0.375000 -4.000000 -8.000000 +1.187500 -1.156250 -14.000000 +1.187500 -8.000000
+[  0.008s] clean prediction: 5 (true label 8)
+[ 39.671s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[ 39.671s] active patch: rows 5-10, cols 5-15 (derived from symPix)
+[ 39.734s] Greedy BYTE warm start: SAT (K=1,B=2).
+clean logits (hex):  0xa0  0x86  0xe8  0x90  0x88  0x46  0xbb  0x85  0x46  0x88
+clean logits (bits): 10100000 10000110 11101000 10010000 10001000 01000110 10111011 10000101 01000110 10001000
+clean logits (double): -2.000000 -12.000000 -0.375000 -4.000000 -8.000000 +1.187500 -1.156250 -14.000000 +1.187500 -8.000000
+post-perturb logits (hex):  0x98  0x86  0xf5  0x8f  0x89  0x1e  0xce  0x86  0x34  0x89
+post-perturb logits (bits): 10011000 10000110 11110101 10001111 10001001 00011110 11001110 10000110 00110100 10001001
+post-perturb logits (double): -3.000000 -12.000000 -0.171875 -4.500000 -7.500000 +0.468750 -0.781250 -12.000000 +0.812500 -7.500000
+changes: 1 bytes, 2 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    1  145    5   5    0x00        00000000   -1.000000     0xc0        11000000   +0.505882    2
+new prediction: 8 (true 5)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0x98  0x86  0xf5  0x8f  0x89  0x1e  0xce  0x86  0x34  0x89
+replay logits (bits): 10011000 10000110 11110101 10001111 10001001 00011110 11001110 10000110 00110100 10001001
+replay logits (double): -3.000000 -12.000000 -0.171875 -4.500000 -7.500000 +0.468750 -0.781250 -12.000000 +0.812500 -7.500000
+[ 39.735s] replay prediction: 8 (true label 5) | note=witness_found_greedy_byte
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=-1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.000000 | elapsed=39.735s | pixels_changed=1 | total_bit_flips=2 | avg_hamming_per_pixel=2.000000 | patch_rows=5-10 | patch_cols=5-15 | note=witness_found_greedy_byte

@@ -1,0 +1,26 @@
+[  0.000s] init: idx=1930 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x87  0x86  0x64  0x98  0x60  0x8f  0x47  0xb1  0x9c  0xad
+clean logits (bits): 10000111 10000110 01100100 10011000 01100000 10001111 01000111 10110001 10011100 10101101
+clean logits (double): -10.000000 -12.000000 +2.500000 -3.000000 +2.000000 -4.500000 +1.218750 -1.468750 -2.500000 -1.593750
+[  0.006s] clean prediction: 2 (true label 2)
+[  0.233s] heuristic ROI: 2x2 block at rows 11-12, cols 11-12
+[  0.390s] selection: nSym=2 (from 4), topx=2, rank_fast=off
+[  0.390s] active patch: rows 11-12, cols 12-12 (derived from symPix)
+[  0.428s] Greedy BYTE warm start: SAT (K=1,B=2).
+clean logits (hex):  0x87  0x86  0x64  0x98  0x60  0x8f  0x47  0xb1  0x9c  0xad
+clean logits (bits): 10000111 10000110 01100100 10011000 01100000 10001111 01000111 10110001 10011100 10101101
+clean logits (double): -10.000000 -12.000000 +2.500000 -3.000000 +2.000000 -4.500000 +1.218750 -1.468750 -2.500000 -1.593750
+post-perturb logits (hex):  0x86  0x86  0x5a  0x9a  0x6e  0x90  0x3e  0xb1  0x9a  0xcc
+post-perturb logits (bits): 10000110 10000110 01011010 10011010 01101110 10010000 00111110 10110001 10011010 11001100
+post-perturb logits (double): -12.000000 -12.000000 +1.812500 -2.750000 +3.750000 -4.000000 +0.968750 -1.468750 -2.750000 -0.812500
+changes: 1 bytes, 2 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    0  320   11  12    0x00        00000000   -1.000000     0xa0        10100000   +0.254902    2
+new prediction: 4 (true 2)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0x86  0x86  0x5a  0x9a  0x6e  0x90  0x3e  0xb1  0x9a  0xcc
+replay logits (bits): 10000110 10000110 01011010 10011010 01101110 10010000 00111110 10110001 10011010 11001100
+replay logits (double): -12.000000 -12.000000 +1.812500 -2.750000 +3.750000 -4.000000 +0.968750 -1.468750 -2.750000 -0.812500
+[  0.429s] replay prediction: 4 (true label 2) | note=witness_found_greedy_byte
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=-1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.000000 | elapsed=0.429s | pixels_changed=1 | total_bit_flips=2 | avg_hamming_per_pixel=2.000000 | patch_rows=11-12 | patch_cols=12-12 | note=witness_found_greedy_byte

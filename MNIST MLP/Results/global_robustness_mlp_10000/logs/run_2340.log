@@ -1,0 +1,13 @@
+[  0.000s] init: idx=2340 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0x83  0x84  0x8e  0x88  0x7a  0xa4  0xf0  0x94  0x44  0x72
+clean logits (bits): 10000011 10000100 10001110 10001000 01111010 10100100 11110000 10010100 01000100 01110010
+clean logits (double): -24.000000 -16.000000 -5.000000 -8.000000 +12.000000 -1.875000 -0.250000 -3.500000 +1.125000 +5.000000
+[  0.009s] clean prediction: 4 (true label 4)
+[ 33.627s] selection: nSym=2 (from 784), topx=2, rank_fast=off
+[ 33.628s] active patch: rows 10-21, cols 13-20 (derived from symPix)
+[ 34.186s] Proceeding to BaB (greedy enabled).
+[ 34.186s] Skipping root bound check (--no-root-bound).
+[ 34.186s] BaB search starting (K≤2, B≤4, nSym=2, depth_limit=500000000, widen=1.00)...
+[ 34.285s] PRUNE: margin=-7.000000, optimistic_rem(widened)=6.000000 → cannot exceed 0.
+[ 34.285s] No counterexample within budgets (BaB): no misclassification found.
+STATUS: No counterexample | best_upper_margin=-1.000000 | elapsed=34.285s | pixels_changed=0 | total_bit_flips=0 | avg_hamming_per_pixel=0.000000 | patch_rows=10-21 | patch_cols=13-20 | note=no_counterexample_within_budgets

@@ -1,0 +1,27 @@
+[  0.000s] init: idx=3884 kmax=2 bmax=4 topx=2 widen=1.000 rank_fast=off
+clean logits (hex):  0xe5  0x84  0xc6  0x88  0x62  0x92  0x9d  0xbc  0x64  0x6f
+clean logits (bits): 11100101 10000100 11000110 10001000 01100010 10010010 10011101 10111100 01100100 01101111
+clean logits (double): -0.421875 -16.000000 -0.906250 -8.000000 +2.250000 -3.750000 -2.375000 -1.125000 +2.500000 +3.875000
+[  0.008s] clean prediction: 9 (true label 9)
+[  0.304s] heuristic ROI: 2x2 block at rows 14-15, cols 13-14
+[  0.504s] selection: nSym=2 (from 4), topx=2, rank_fast=off
+[  0.504s] active patch: rows 15-15, cols 13-14 (derived from symPix)
+[  0.866s] Greedy BIT warm start: SAT (K=2, B=3).
+clean logits (hex):  0xe5  0x84  0xc6  0x88  0x62  0x92  0x9d  0xbc  0x64  0x6f
+clean logits (bits): 11100101 10000100 11000110 10001000 01100010 10010010 10011101 10111100 01100100 01101111
+clean logits (double): -0.421875 -16.000000 -0.906250 -8.000000 +2.250000 -3.750000 -2.375000 -1.125000 +2.500000 +3.875000
+post-perturb logits (hex):  0xb9  0x84  0xd9  0x88  0x54  0x92  0xaf  0xae  0x66  0x66
+post-perturb logits (bits): 10111001 10000100 11011001 10001000 01010100 10010010 10101111 10101110 01100110 01100110
+post-perturb logits (double): -1.218750 -16.000000 -0.609375 -8.000000 +1.625000 -3.750000 -1.531250 -1.562500 +2.750000 +2.750000
+changes: 2 bytes, 3 bit flips
+  idx  pix  row col    old_hex        old_bits     old_double     new_hex        new_bits     new_double  ham
+    0  434   15  14    0x00        00000000   -1.000000     0xc0        11000000   +0.505882    2
+    1  433   15  13    0x00        00000000   -1.000000     0x80        10000000   +0.003922    1
+new prediction: 8 (true 9)
+----- REPLAY FORWARD PASS (stage-2) -----
+replay logits (hex):  0xb9  0x84  0xd9  0x88  0x54  0x92  0xaf  0xae  0x66  0x66
+replay logits (bits): 10111001 10000100 11011001 10001000 01010100 10010010 10101111 10101110 01100110 01100110
+replay logits (double): -1.218750 -16.000000 -0.609375 -8.000000 +1.625000 -3.750000 -1.531250 -1.562500 +2.750000 +2.750000
+[  0.867s] replay prediction: 8 (true label 9) | note=witness_found_greedy_bit
+----- END REPLAY -----
+STATUS: Counterexample | best_upper_margin=-1000000000000000052504760255204420248704468581108159154915854115511802457988908195786371375080447864043704443832883878176942523235360430575644792184786706982848387200926575803737830233794788090059368953234970799945081119038967640880074652742780142494579258788820056842838115669472196386865459400540160.000000 | elapsed=0.867s | pixels_changed=2 | total_bit_flips=3 | avg_hamming_per_pixel=1.500000 | patch_rows=15-15 | patch_cols=13-14 | note=witness_found_greedy_bit
